@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="492.0" prefWidth="737.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="fouilledetextinterface.FXMLDocumentController">
+   <children>
+      <Button fx:id="importBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ActionImport" prefHeight="25.0" prefWidth="110.0" text="Import CSV file :" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <TextField fx:id="textfield1" layoutX="133.0" layoutY="14.0" prefHeight="25.0" prefWidth="591.0" promptText="Or type the path of your file ... !" AnchorPane.topAnchor="14.0" />
+      <Label layoutX="483.0" layoutY="57.0" prefHeight="25.0" prefWidth="46.0" text="Search :" />
+      <TextField fx:id="textfield2" layoutX="529.0" layoutY="57.0" prefHeight="25.0" prefWidth="196.0" promptText="Enter word to search ..." AnchorPane.rightAnchor="12.0" />
+      <ToolBar layoutX="14.0" layoutY="50.0" prefHeight="40.0" prefWidth="408.0" AnchorPane.leftAnchor="14.0">
+        <items>
+          <Button fx:id="displayBtn" mnemonicParsing="false" onAction="#ActionDisplay" text="Display" />
+            <Button fx:id="sortBtn1" mnemonicParsing="false" onAction="#ActionSortDate" text="Sort by Date" />
+            <Button fx:id="sortBtn2" mnemonicParsing="false" onAction="#ActionSortUser" text="Sort by User" />
+            <Button fx:id="sortBtn3" mnemonicParsing="false" onAction="#ActionNumberRe" text="Sort by number of Re-Tweet" />
+        </items>
+      </ToolBar>
+    <AnchorPane layoutY="94.0" minHeight="0.0" minWidth="0.0" prefHeight="397.0" prefWidth="737.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="94.0">
+         <children>
+            <ScrollPane prefHeight="397.0" prefWidth="737.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <TableView fx:id="myTable" prefHeight="397.0" prefWidth="737.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn id="id" fx:id="id" prefWidth="75.0" text="Identifier" />
+                <TableColumn fx:id="tweetUser" prefWidth="75.0" text="Tweeter User" />
+                  <TableColumn fx:id="tweetDate" prefWidth="75.0" text="Tweet Date" />
+                  <TableColumn fx:id="cont" prefWidth="75.0" text="Content" />
+                  <TableColumn fx:id="retweet" prefWidth="75.0" text="Retweet" />
+                  <TableColumn fx:id="retweetUser" prefWidth="75.0" text="User Retweet" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
