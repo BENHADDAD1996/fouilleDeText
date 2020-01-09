@@ -18,7 +18,7 @@ import java.util.Map;
 
 public class BaseOfTweets {
 	
-	public final static String ch = "C:/Users/Shuriken/Desktop/Julien Velcin Java/java Projet/Foot.txt";		
+//	public final static String ch = "C:/Users/Shuriken/Desktop/Julien Velcin Java/java Projet/Foot.txt";		
 
 	
 	public void afficher(List<TweetClass> e) {

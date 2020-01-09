@@ -38,9 +38,9 @@ private static BaseOfTweets base;
 			BufferedReader lire = new BufferedReader(new FileReader(path));
 			
 			String lecture = lire.readLine();
-			System.out.println("Dans try de lecture CSV");
+			//System.out.println("Dans try de lecture CSV");
 			while(lecture != null) {
-				System.out.println("hi");
+				//System.out.println("hi");
 				String[] attributs  = lecture.split("\t");
 				TweetClass tweet = TweetClass.creationTweet(attributs);	
 				liste.add(tweet); //Rajouter les tweets à notre liste d'objet TweetClass
@@ -58,6 +58,7 @@ private static BaseOfTweets base;
 	
 	
 	public static void main(String[] args) throws ParseException {
+            
 		System.out.println("Que Souhaitez-vous faire?\n1- Afficher les tweets\n2- Afficher les tweets (en étant trier par années)"
 				+ "\n3- Afficher les tweets (en étant trier par noms d'utilisateurs)"
 				+ "\n4- Afficher les tweets (en étant trier par nombre de retweets)"+
